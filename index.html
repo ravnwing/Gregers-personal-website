@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Wm. Gregers Walker
+	</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body {
+			background-image: url(circuitree.png);
+			background-repeat: no-repeat;
+			background-position: right top;
+			background-size: 30%;
+			background-attachment: fixed;
+		}
+	</style>
+	
+	<script>
+		var rand;
+		function newQuote(){
+			rand = Math.random()*6;
+			rand = Math.round(rand);
+			switch(rand){
+				case 0:
+					document.getElementById("quotetext").innerHTML = "<i>Understand something well as I may, my comprehension can only be an infinitesimal fraction of all I want to understand</i>";
+					document.getElementById("quotemaker").innerHTML = "-Ada Lovelace";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Ada_Lovelace"
+					break;
+				case 1:
+					document.getElementById("quotetext").innerHTML = "<i>The only way to do great work is to love the work you do</i>";
+					document.getElementById("quotemaker").innerHTML = "-Steve Jobs";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Steve_Jobs"
+					break;
+				case 2:
+					document.getElementById("quotetext").innerHTML = "<i>They don't make bugs like Bunny anymore</i>";
+					document.getElementById("quotemaker").innerHTML = "-Olav Mjelde";
+					document.getElementById("quoterLink").href = "http://mjelde.blogspot.com"
+					break;
+				case 3:
+					document.getElementById("quotetext").innerHTML = "<i>Talk is cheap. Show me the code</i>";
+					document.getElementById("quotemaker").innerHTML = "-Linus Torvalds";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Linus_Torvalds"
+					break;
+				case 4:
+					document.getElementById("quotetext").innerHTML = "<i>Success is a lousy teacher. It seduces smart people into thinking they can't lose</i>";
+					document.getElementById("quotemaker").innerHTML = "-Bill Gates";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Bill_Gates"
+					break;
+				case 5:
+					document.getElementById("quotetext").innerHTML = "<i>Don't only practice your art, but force your way into its secrets, for it and knowledge can raise men to the Divine</i>";
+					document.getElementById("quotemaker").innerHTML = "-Ludwig van Beethoven";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven";
+					break;
+				default:
+					document.getElementById("quotetext").innerHTML = "<i>Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its life believing it is stupid.</i>";
+					document.getElementById("quotemaker").innerHTML = "-Albert Einstein";
+					document.getElementById("quoterLink").href = "https://en.wikipedia.org/wiki/Albert_Einstein"
+			}	
+		}
+	</script>
+</head>
+
+<body id="treebackground" onload="newQuote()">
+	<div id="heading">William Gregers Walker</div>	<br	 />
+	
+	<div id="banner_place">
+	
+		<div class="rectangle">
+		
+			<ul id="banner">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="edupage.html">Education</a></li>
+				<li><a href="workpage.html">Work History</a></li>
+				<li><a href="accompage.html">Accomplishments</a></li>
+				<li><a href="contactpage.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</div>
+	<br  /><br  />
+	
+	
+	
+	<div id="quotetext"></div><br  />
+	<a id="quoterLink" href="" target="_blank"><div id="quotemaker"></div></a><br />
+	<div id="buttondiv">
+		<button onclick="newQuote()">New Quote</button>
+	</div>
+	
+</body>
+</html>
